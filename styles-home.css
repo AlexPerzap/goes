@@ -1,7 +1,7 @@
 /* Estilos en Home */
 body {
   background-color: #f0ebe1;
-  height: 100%;
+  /* height: 100%; */
 }
 
 h1,
@@ -43,51 +43,42 @@ span {
   align-self: center;
 }
 
+.sidebar {
+  position: fixed;
+  margin: 0 0 0 93%;
+  /* padding: 0; */
+  width: max-content;
+  /* background-color: #f1f1f1; */
+  /* height: 100%; */
+  /* overflow: auto; */
+}
+
+.hamburguesa{
+  border: none;
+  text-align: right;
+}
+
+.links {
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  visibility: hidden;
+  
+}
+
+.links-show {
+  visibility: visible;
+  /* position: absolute; */
+
+}
 
 .navegacion {
   font-family: "Bebas Neue", cursive;
   font-size: 2vw;
   text-decoration: none;
-  
   color: black;
 }
-
-.sidebar {
-  margin: 0 0 0 93%;
-  padding: 0;
-  width: 6.5vw;
-  background-color: #f1f1f1;
-    
-  height: 100%;
-  /* overflow: auto; */
-}
-
-/* aside{
-  visibility: hidden;
-}
-
-.aside:active{
-visibility: initial;
-} */
-
-.links {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translate(-100%);
-}
-
-.links-show {
-  transform: translate(0);
-}
-
-.hamburguesa{
-  border: none;
-  position: sticky;
-}
-
 
 .links{
   text-align: right;
