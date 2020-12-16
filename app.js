@@ -9,28 +9,20 @@ function esconderMostrar() {
 }
 
 
+/*Botón responsive mostrar overlay */
+let botonResp = document.getElementById("hamburguesa-resp");
 
+botonResp.addEventListener("click", mostrarOverlay);
 
+function mostrarOverlay(){
+    document.getElementById("myNav").style.height = "100%";
+}
 
+/*Botón responsive cerrar overlay */
+let botonRespCerr = document.getElementById("closebtn");
 
+botonRespCerr.addEventListener("click", cerrarOverlay);
 
-
-
-
-
-
-
-
-
-
-// let boton = document.getElementById("hamburguesa");
-// boton.addEventListener("click", esconderMostrar);
-
-// function esconderMostrar(){
-//     let menu = document.querySelector(".links");
-    
-//     if (menu.classList.contains("links-show")){
-//         menu.classList.remove("links-show");
-//     } else{
-//     menu.classList.add("links-show");}
-// }
+function cerrarOverlay(){
+    document.getElementById("myNav").style.height = "0%";
+}

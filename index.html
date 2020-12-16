@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles-home.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monoton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -18,34 +16,66 @@
 </head>
 
 <body>
+  <!-- nav overlay for smaller devices -->
+  <div id="myNav" class="overlay">
+    <button id="closebtn" class="closebtn">
+      <i class="fas fa-times"></i>
+    </button> 
+   <ul class="overlay-content navegacion">
+        <li>
+          <a class="nav-res" href="#home">inicio</a>
+        </li>
+        <li>
+          <a class="nav-res" href="#about">about</a>
+        </li>
+        <li>
+          <a class="nav-res" href="#musica">música</a>
+        </li>
+        <li>
+          <a class="nav-res" href="#videos">videos</a>
+        </li>
+        <li>
+          <a class="nav-res" href=#fotos>fotos</a>
+        </li>
+        <li>
+          <a class="nav-res" href="#tienda">tienda</a>
+        </li>
+        <li>
+          <a class="nav-res" href="#contacto">contacto</a>
+        </li>
+    </ul>    
+  </div>
   <!-- nav button and bar -->
     <nav class="sidebar">
       <button id="hamburguesa" class="hamburguesa">
         <i class="fas fa-bars"></i>
       </button>
+      <button id="hamburguesa-resp" class="hamburguesa">
+        <i class="fas fa-bars"></i>
+      </button>
       <aside class="links">
         <!-- links -->
-        <ul>
+        <ul class="navegacion">
           <li>
-            <a class="navegacion" href="#home">inicio</a>
+            <a class="nav-res" href="#home">inicio</a>
           </li>
           <li>
-            <a class="navegacion" href="#about">about</a>
+            <a class="nav-res" href="#about">about</a>
           </li>
           <li>
-            <a class="navegacion" href="#musica">música</a>
+            <a class="nav-res" href="#musica">música</a>
           </li>
           <li>
-            <a class="navegacion" href="#videos">videos</a>
+            <a class="nav-res" href="#videos">videos</a>
           </li>
           <li>
-            <a class="navegacion" href=#fotos>fotos</a>
+            <a class="nav-res" href=#fotos>fotos</a>
           </li>
           <li>
-            <a class="navegacion" href="#tienda">tienda</a>
+            <a class="nav-res" href="#tienda">tienda</a>
           </li>
           <li>
-            <a class="navegacion" href="#contacto">contacto</a>
+            <a class="nav-res" href="#contacto">contacto</a>
           </li>
         </ul>
       </aside>
@@ -53,8 +83,8 @@
   <main id="home">
     <div class="container">
       <h1 class="nombre">federico</h1>
-      <span class="apellido">goes</span>
-      <img class="img1" src="../goes/images/img-home.png" alt="Federico Goes">
+      <h1 class="apellido">goes</h1>
+      <img class="img1" src="images/fede 4.png" alt="Federico Goes">
     </div>
   </main>
   <!-- <div id="about" class="about">ABOUT</div>
