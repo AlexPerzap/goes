@@ -150,6 +150,117 @@ h1 {
 
 }
 
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.subtitle {
+  font-size: 2.5vw;
+  margin: 2%;
+}
+
+.light-subtitle {
+  color: white;
+  font-size: 2.5vw;
+  margin: 2%;
+}
+
+/* =========================================================== ABOUT */
+
+.about {
+  background-color: white;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-text {
+  font-size: 1.3vw;
+  padding: 1%;
+}
+
+
+/* =========================================================== MÚSICA */
+
+.musica {
+  background-color: black;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: row;
+  flex-direction: space-evenly;
+  padding: 2%;
+}
+
+.videos {
+  display: flex;
+  width: 50%;
+  margin: 0 3% 0 3%;
+  /* padding: 2%; */
+}
+
+.cont-video1 {
+  margin: 3%;
+}
+
+/* =========================================================== FOTOS */
+
+.fotos {
+  background-color: white;
+}
+
+/* =========================================================== TIENDA */
+
+.tienda {
+  background-color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.card-row-container {
+  display: flex;
+}
+
+.card {
+  margin: 1%;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-description {
+  text-align: center;
+}
+
+/* =========================================================== CONTACTO */
+
+.contacto {
+  background-color: black;
+}
+
+.logo-contact {
+  font-family: Monoton;
+  color: white;
+  font-size: 3vw;
+}
+
+.contact-info-text {
+  color: white;
+}
+
+.social-links i {
+  color: white;
+}
 
 /* Media queries */
 @media only screen and (max-width: 768px) and (min-width: 321px) {
