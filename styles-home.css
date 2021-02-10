@@ -137,11 +137,15 @@ h1 {
 }
 
 .subtitle {
+  font-family: "Bebas Neue", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
   font-size: 2.5vw;
   margin: 2%;
 }
 
 .light-subtitle {
+  font-family: "Bebas Neue", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
   color: white;
   font-size: 2.5vw;
   margin: 2%;
@@ -159,8 +163,13 @@ h1 {
 }
 
 .about-text {
+  font-family: "Arimo", sans-serif;
   font-size: 1.3vw;
   padding: 1%;
+}
+
+.about-text strong {
+  font-weight: bold;
 }
 
 /* =========================================================== MÚSICA */
@@ -246,21 +255,48 @@ h1 {
   background-color: black;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-contact {
   font-family: Monoton;
   color: white;
   font-size: 3vw;
 }
 
+.logo-borde {
+  border-right: 5px solid white;
+  padding: 100px;
+}
+
+.contact-info {
+  padding: 100px;
+}
+
+.titulos-contact {
+  font-family: "Archivo Black", sans-serif;
+}
+
 .contact-info-text {
+  font-family: "Arimo", sans-serif;
   color: white;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  color: white;
+  font-size: 3.5vw;
 }
 
 .social-links i {
-  color: white;
+  padding-right: 10px;
 }
 
-/* Media queries */
+/* =========================================================== Media queries */
 @media only screen and (max-width: 768px) and (min-width: 321px) {
   .img1 {
     margin-top: 3vh;
