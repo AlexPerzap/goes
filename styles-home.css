@@ -1,4 +1,13 @@
-/* Estilos en Home */
+/* Debugger */
+html {
+  --outline: 1px dotted rgba(255, 0, 0, 0.5);
+  --outline: 0px;
+}
+* {
+  outline: var(--outline);
+}
+
+/* =========================================================== HOME */
 body {
   background-color: #f0ebe1;
 }
@@ -7,140 +16,148 @@ h1 {
   font-family: Monoton;
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
 .container {
   width: 70%;
-  margin: 100px auto 0px auto;
 }
 
 .nombre {
-  font-size: 7vw;
+  font-size: 8vw;
   letter-spacing: 0.1em;
   text-align: center;
 }
 
 .apellido {
-  font-size: 9vw;
+  font-size: 10vw;
   letter-spacing: 0.6em;
   margin-left: 4.5vw;
   text-align: center;
 }
 
 .img1 {
-  width: 50%;
+  height: 60vh;
   margin-top: 2vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.sidebar {
-  position: fixed;
-  margin: 1.5% 0 0 93%;
-  width: max-content;
-}
-
+/* =====SIDEBAR */
 .hamburguesa {
-  text-align: right;
   background-color: #f0ebe1;
-  margin-left: -2vw;
-}
-
-#hamburguesa-resp {
-  display: none;
-}
-
-.fa,
-.fas {
   font-size: 2.5vw;
+  position: relative;
+  left: 71vw;
+  top: 10vh;
 }
 
-.links {
-  transform: translate(115%);
-  transition: transform 0.9s;
-  margin-top: 1vh;
+.hamburguesa:hover {
+  color: #5a5a5a;
 }
 
-.links-show {
-  transform: translate(-70%);
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #f0ebe1;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10vh;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.navegacion a {
+/*Mostrar el menu*/
+.sidenav-show {
+  width: 16vw;
+}
+
+/* The navigation menu links */
+.sidenav a {
   font-family: "Bebas Neue", cursive;
   font-size: 2vw;
   text-decoration: none;
   color: black;
+
+  padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.3s;
 }
 
-.links {
-  text-align: right;
+.sidenav a:hover {
+  color: #5a5a5a;
 }
 
-/* Navigation Menu Overlay */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 0;
-  width: 100%;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0, 0, 0); /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+/* Sticky navbar */
+#navbar {
+  display: flex;
+  overflow: hidden;
+  background-color: #f08e2a; /*#F77D2C*/ /*#df4028*/
+  z-index: 2;
+
+  padding: 15px;
+  background-image: radial-gradient(hsl(0deg 0% 0% / 10%) 20%, transparent 21%);
+  background-size: 14px 14px;
 }
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 16%;
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  /* margin-top: 30px; 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 2vw;
+#navbar a {
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px;
   text-decoration: none;
-  font-size: 8vw;
-  color: #f0ebe1;
-  display: block; /* Display block instead of inline */
+  font-family: "Archivo Black", sans-serif;
 }
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #f0ebe1;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
+.prueba {
+  clip-path: polygon(12% 0, 100% 0%, 90% 100%, 0% 100%);
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+/* SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* SWIPER DE FOTOS */
 .swiper-container {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 10%;
   padding-bottom: 50px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
 }
 
 .section {
   height: 100vh;
-  width: 100vw;
+  padding: 5%;
 }
 
 .subtitle {
   font-family: "Bebas Neue", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
   font-size: 2.5vw;
-  margin: 2%;
+  padding-bottom: 3vh;
 }
 
 .light-subtitle {
@@ -148,7 +165,7 @@ h1 {
     sans-serif;
   color: white;
   font-size: 2.5vw;
-  margin: 2%;
+  padding-bottom: 3vh;
 }
 
 /* =========================================================== ABOUT */
@@ -159,17 +176,37 @@ h1 {
 
 .about-text-container {
   display: flex;
-  flex-direction: row;
+  text-align: justify;
+  gap: 5vw;
+}
+
+.select-lang {
+  display: none;
+}
+
+.select-lang p {
+  font-size: 2vw;
+  font-family: "Archivo Black", sans-serif;
+  color: #625b53;
 }
 
 .about-text {
+  flex-basis: 50%;
+}
+
+.about-text p {
   font-family: "Arimo", sans-serif;
   font-size: 1.3vw;
-  padding: 1%;
+  line-height: 1.4;
+  padding-bottom: 3%;
 }
 
 .about-text strong {
   font-weight: bold;
+}
+
+#about-text-container-p {
+  display: none;
 }
 
 /* =========================================================== MÚSICA */
@@ -178,30 +215,41 @@ h1 {
   background-color: black;
 }
 
+.media-container {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reproductor iframe {
+  width: 30vw;
+  height: 65vh;
+}
+
+.novedad {
+  background-color: #f0ebe1;
+  border-radius: 5%;
+  width: 44vw;
+  text-align: center;
+}
+
+/* =====================MÚSICA 2 */
 .musica2 {
   background-color: black;
   display: flex;
   justify-content: center;
 }
 
-.media-container {
-  display: flex;
-  flex-direction: row;
-  flex-direction: space-evenly;
-  padding: 2%;
-}
-
-/* =====================MÚSICA 2 */
 .videos {
-  width: 49%;
+  width: 60%;
+  margin-top: 20vh;
 }
 
-.cont-video1 {
+.cont-video {
   position: relative;
-  overflow: hidden;
-  width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  margin: 4%;
+  margin-bottom: 20vh;
 }
 
 .responsive-iframe {
@@ -224,40 +272,60 @@ h1 {
 
 .tienda {
   background-color: white;
+  height: auto;
 }
 
-.card-container {
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Arimo", sans-serif;
+}
+
+.tarjeta {
+  max-width: 16em;
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  /*Decorativos*/
+  margin: 1em;
 }
 
-.card-row-container {
+.imagen_tarjeta {
+  max-height: 16em;
+  overflow: hidden;
+  /*Decorativos*/
+}
+
+.imagen_tarjeta img {
+  object-fit: cover;
+  display: block;
+}
+
+.contenido_tarjeta {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  /* Opcionales */
+  padding: 1em 1em 0;
+  gap: 0.8em;
 }
 
-.card {
-  margin: 1%;
-}
-
-.card-title {
+.contenido_tarjeta h3 {
   font-weight: bold;
-  text-align: center;
-}
-
-.card-description {
-  text-align: center;
+  font-size: 1.2em;
 }
 
 /* =========================================================== CONTACTO */
 
 .contacto {
   background-color: black;
+  height: 50vh;
 }
 
 .contact-container {
   display: flex;
-  justify-content: center;
+  height: 69%;
+  align-items: center;
 }
 
 .logo-contact {
@@ -266,13 +334,27 @@ h1 {
   font-size: 3vw;
 }
 
+.logo-contact_apellido {
+  letter-spacing: 0.8em;
+  padding-left: 0.6em;
+}
+
 .logo-borde {
-  border-right: 5px solid white;
-  padding: 100px;
+  width: 50%;
+  border-right: solid 0.3vw white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.ruler {
+  background-color: blanchedalmond;
+  width: 5px;
 }
 
 .contact-info {
-  padding: 100px;
+  width: 50%;
+  padding-left: 20%;
 }
 
 .titulos-contact {
@@ -282,88 +364,201 @@ h1 {
 .contact-info-text {
   font-family: "Arimo", sans-serif;
   color: white;
+  font-size: 1.5vw;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
+  gap: 1.2vw;
   padding-top: 3%;
   color: white;
   font-size: 3.5vw;
 }
 
-.social-links i {
-  padding-right: 10px;
-}
-
 /* =========================================================== Media queries */
-@media only screen and (max-width: 768px) and (min-width: 321px) {
-  .img1 {
-    margin-top: 3vh;
-    width: 138%;
+/*========Landscape*/
+@media only screen and (orientation: landscape) and (max-width: 1380px) {
+  .about-text p {
+    font-size: 1.6vw;
   }
 
-  .apellido {
-    font-size: 19vw;
-    margin-left: -6vw;
-  }
-
-  .nombre {
-    font-size: 14.5vw;
-    margin-left: -4.5vw;
-  }
-
-  .sidebar {
-    margin: -10.5% 0 0 94%;
-  }
-
-  .fa,
-  .fas {
-    font-size: 6vw;
-  }
-
-  .links {
-    display: none;
-  }
-
-  #hamburguesa-resp {
-    display: initial;
-  }
-
-  #hamburguesa {
-    display: none;
+  .sidenav {
+    padding-top: 13vh;
   }
 }
 
-@media only screen and (max-width: 320px) {
-  .nombre {
-    font-size: 16.5vw;
+@media only screen and (orientation: landscape) and (max-width: 1020px) {
+  .about-text p {
+    font-size: 1.4vw;
   }
 
-  .apellido {
-    font-size: 21vw;
-    margin-left: 0vw;
+  .swiper-slide {
+    width: 150px;
+    height: 150px;
   }
 
   .img1 {
-    margin-top: 4vh;
-    width: 219%;
-    margin-left: -30%;
+    margin-top: 0;
   }
 
-  .sidebar {
-    margin: -24% 0 0 81%;
+  .logo-borde {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  .links {
+  .logo-contact {
+    font-size: 16px;
+  }
+  .contact-info-text {
+    font-size: 10px;
+  }
+
+  .contact-info {
+    padding-left: 15%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 750px) {
+  .sidenav {
+    padding-top: 5vh;
+  }
+
+  .sidenav-show {
+    width: 18vw;
+  }
+
+  .sidenav a {
+    font-size: 3vw;
+  }
+}
+
+/*========Portrait*/
+@media only screen and (orientation: portrait) {
+  .sidenav-show {
+    width: 14vw;
+  }
+
+  .sidenav a {
+    font-size: 3vw;
+    padding: 4px 4px 8px 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .hamburguesa {
+    font-size: 5vw;
+    left: 90vw;
+    top: -7vh;
+  }
+
+  .nombre {
+    font-size: 14vw;
+  }
+
+  .apellido {
+    font-size: 17vw;
+    margin-left: 7.2vw;
+  }
+
+  .section {
+    height: auto;
+    margin-bottom: -1px;
+  }
+
+  .subtitle,
+  .light-subtitle {
+    font-size: 12.5vw;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .select-lang {
+    display: flex;
+    justify-content: center;
+    padding-left: 60vw;
+    gap: 5vw;
+    padding-bottom: 1.5vh;
+  }
+
+  #about-text-container-p {
+    display: flex;
+    justify-content: center;
+  }
+
+  #about-text-container-l {
     display: none;
   }
 
-  #hamburguesa-resp {
-    display: initial;
+  .about-text {
+    flex-basis: 95%;
   }
 
-  #hamburguesa {
-    display: none;
+  .about-text p {
+    font-size: 1.5vh;
+  }
+
+  .media-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .reproductor iframe {
+    width: 55vw;
+    height: 30vh;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 1200px) {
+  .home {
+    align-items: center;
+  }
+
+  .img1 {
+    height: 51vh;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 970px) {
+  .sidenav-show {
+    width: 16vw;
+  }
+
+  .sidenav a {
+    font-size: 4vw;
+    padding: 4px 4px 8px 4px;
+  }
+
+  .img1 {
+    height: 40vh;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 820px) {
+  .img1 {
+    height: 38vh;
+  }
+
+  .about-text p {
+    font-size: 1.8vh;
+  }
+
+  .logo-contact {
+    font-size: 16px;
+  }
+  .contact-info-text {
+    font-size: 10px;
+  }
+
+  .contact-info {
+    padding-left: 15%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 670px) {
+  .img1 {
+    height: 35vh;
   }
 }
