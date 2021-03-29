@@ -1,28 +1,58 @@
-let boton = document.getElementById("hamburguesa");
-
-boton.addEventListener("click", esconderMostrar);
-
-
-function esconderMostrar() {
-    let element = document.querySelector(".links");
-    element.classList.toggle("links-show");
+/*NAV SIDEBAR - MENU DESKTOP*/
+let sidemenu = document.getElementById("mySidenav");
+function openNav() {
+  sidemenu.classList.add("sidenav-show");
 }
 
+let btnMenu = document.getElementById("hamburguesa");
+btnMenu.addEventListener("click", openNav);
 
-/*Botón responsive mostrar overlay */
-let botonResp = document.getElementById("hamburguesa-resp");
-
-botonResp.addEventListener("click", mostrarOverlay);
-
-function mostrarOverlay(){
-    document.getElementById("myNav").style.height = "100%";
+function closeNav() {
+  sidemenu.classList.remove("sidenav-show");
 }
 
-/*Botón responsive cerrar overlay */
-let botonRespCerr = document.getElementById("closebtn");
+let closeMenu = document.getElementById("closebtn");
+closeMenu.addEventListener("click", closeNav);
 
-botonRespCerr.addEventListener("click", cerrarOverlay);
+let linksNav = document.querySelectorAll(".nav");
+linksNav.forEach(function (elemento) {
+  elemento.addEventListener("click", closeNav);
+});
 
-function cerrarOverlay(){
-    document.getElementById("myNav").style.height = "0%";
+/*CAMBIAR IDIOMAS TEXTO - PORTRAIT */
+let textEsp = document.querySelector(".about-esp");
+let textEng = document.querySelector(".about-eng");
+
+function mostrarEng() {
+  textEng.style.display = "block";
+  textEsp.style.display = "none";
 }
+
+function mostrarEsp() {
+  textEng.style.display = "none";
+  textEsp.style.display = "block";
+}
+
+let esp = document.querySelector("p.esp");
+let eng = document.querySelector("p.eng");
+
+eng.addEventListener("click", mostrarEng);
+esp.addEventListener("click", mostrarEsp);
+
+/*STICKY NAVBAR----(ALTERNATIVA DE NAVEGACIÓN)*/
+// When the user scrolls the page, execute myFunction
+// window.onscroll = function () {
+//   myFunction();
+// };
+
+// let navbar = document.getElementById("navbar");
+
+// let sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky");
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
